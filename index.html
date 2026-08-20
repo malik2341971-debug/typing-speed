@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-keyboard"></i>
+                <span>TypeFlow</span>
+            </div>
+            <nav>
+                <button class="nav-btn active" data-mode="standard">Standard</button>
+                <button class="nav-btn" data-mode="sprint">Sprint Mode</button>
+                <button class="nav-btn" data-mode="wordfall">Word Fall</button>
+            </nav>
+            <div class="settings-toggle">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+                <button id="sound-toggle" class="icon-btn active" title="Toggle Sound"><i class="fa-solid fa-volume-high"></i></button>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Standard / Sprint Mode View -->
+            <div id="typing-view" class="view active">
+                <div class="stats-bar">
+                    <div class="stat"><span class="stat-label">WPM</span><span class="stat-value" id="wpm">0</span></div>
+                    <div class="stat"><span class="stat-label">ACCURACY</span><span class="stat-value" id="accuracy">100%</span></div>
+                    <div class="stat"><span class="stat-label">TIME</span><span class="stat-value" id="time">60s</span></div>
+                </div>
+
+                <div class="typing-container">
+                    <div id="words" class="words-display"></div>
+                    <input type="text" id="typing-input" class="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+
+                <div class="controls">
+                    <button id="restart-btn" class="icon-btn" title="Restart Test"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Word Fall Game View -->
+            <div id="wordfall-view" class="view">
+                <div class="stats-bar">
+                    <div class="stat"><span class="stat-label">SCORE</span><span class="stat-value" id="fall-score">0</span></div>
+                    <div class="stat"><span class="stat-label">LIVES</span><span class="stat-value" id="fall-lives">3</span></div>
+                </div>
+                <div class="game-area" id="wordfall-area">
+                    <div class="start-overlay" id="wordfall-start">
+                        <h2>Word Fall</h2>
+                        <p>Type the falling words before they hit the bottom.</p>
+                        <button class="primary-btn" id="start-wordfall-btn">Start Game</button>
+                    </div>
+                    <input type="text" id="wordfall-input" class="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+            </div>
+        </main>
+
+        <!-- Results Modal -->
+        <div id="results-modal" class="modal">
+            <div class="modal-content">
+                <h2>Test Complete</h2>
+                <div class="results-stats">
+                    <div class="result-box">
+                        <span class="result-val" id="result-wpm">0</span>
+                        <span class="result-lbl">WPM</span>
+                    </div>
+                    <div class="result-box">
+                        <span class="result-val" id="result-acc">100%</span>
+                        <span class="result-lbl">Accuracy</span>
+                    </div>
+                </div>
+                <div class="result-details">
+                    <p>Correct words: <span id="result-correct">0</span></p>
+                    <p>Incorrect words: <span id="result-incorrect">0</span></p>
+                </div>
+                <button id="modal-restart-btn" class="primary-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
