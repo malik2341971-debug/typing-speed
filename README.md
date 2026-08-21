@@ -1,29 +1,28 @@
 # Modern Typing Speed Test
 
-A sleek, responsive, and modern typing speed test application built with vanilla HTML, CSS, and JavaScript. 
+A sleek, responsive, and modern typing speed test web application built with vanilla HTML, CSS, and JavaScript. 
 
 ## Features
 
-- **Standard Mode**: A classic 60-second typing test to measure your Words Per Minute (WPM) and Accuracy.
-- **Sprint Mode**: A fast-paced mode where you type a set number of words as quickly as possible.
-- **Word Fall Mini-Game**: Defend your screen! Type the falling words before they hit the bottom. You have 3 lives.
-- **Dark/Light Mode**: Toggle between a beautiful dark mode and a clean light theme. Your preference is automatically saved.
-- **Audio Feedback**: Enjoy satisfying, synthetic mechanical keyboard sounds using the Web Audio API on every keystroke.
-- **Mobile Responsive**: Fully optimized for mobile devices and virtual keyboards, adapting seamlessly to any screen size.
-
-## Technologies Used
-
-- HTML5
-- CSS3 (Variables, Flexbox, Animations)
-- Vanilla JavaScript
-- Web Audio API
+- **Standard Mode:** Classic 60-second typing test to measure your Words Per Minute (WPM) and accuracy.
+- **Sprint Mode:** Type a fixed number of words (25 words) as fast as possible.
+- **Word Fall Mini-Game:** A fun, interactive game where you must type falling words before they hit the bottom of the screen. You have 3 lives!
+- **Modern UI & Dark/Light Mode:** A clean, responsive design that supports both dark and light themes. It automatically remembers your preference!
+- **Audio Feedback:** Synthetic mechanical keyboard click sounds and error sounds powered by the Web Audio API (no external sound files required).
+- **Mobile Friendly:** Fully responsive design that works perfectly on desktop and mobile browsers, correctly handling mobile virtual keyboards without annoying autocorrect interference.
 
 ## How to Run
 
-Simply open `index.html` in any modern web browser to start typing. No build steps or local servers are required!
+Since the application is built with vanilla web technologies, there is no build step or installation required!
 
-> **Note:** Due to browser security policies, you must press any key before the audio context will activate and play sound.
+1. Clone the repository.
+2. Open `index.html` in any modern web browser.
+3. Start typing!
 
-## License
+*(Note: Browsers require you to interact with the page (e.g., press any key) before playing audio, so the mechanical click sounds will activate automatically as you type.)*
 
-This project is open-source and available for free.
+## Technologies Used
+
+- **HTML5:** Semantic structure.
+- **CSS3:** Custom properties (variables), Flexbox, CSS animations, and media queries for responsiveness.
+- **JavaScript (Vanilla):** DOM manipulation, Web Audio API for synthetic sound generation, and local storage for theme saving.
